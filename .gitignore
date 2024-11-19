@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 # Ignore Visual Studio specific files and folders
 .vs
 .vscode
 bin
 obj
 .git
+=======
+.vs/
+*.vspscc
+>>>>>>> main
