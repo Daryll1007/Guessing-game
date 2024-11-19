@@ -23,7 +23,12 @@ namespace Controllers
             {
                 Console.WriteLine("Your guess is too low.");
             }
-            
+
+            else if (guess > hiddenNumber)
+            {
+                Console.WriteLine("Your guess is too high.");
+            }
+
             else
             {
                 Console.WriteLine("Congratulations! You guessed the correct number!");
@@ -31,7 +36,8 @@ namespace Controllers
                 hiddenNumber = random.Next(1, 101); 
             }
 
-          
+            
+
             guessHistory.AddGuess(guess, guessTime);
         }
     }

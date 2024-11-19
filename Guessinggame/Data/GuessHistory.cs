@@ -20,7 +20,11 @@ namespace Data
 
         public void DisplayHistory()
         {
-            
+            Console.WriteLine("Guess History:");
+            foreach (var guess in guesses)
+            {
+                Console.WriteLine($"Guess: {guess.GuessedNumber}, Time: {guess.GuessTime}");
+            }
         }
     }
 }

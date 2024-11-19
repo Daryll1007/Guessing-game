@@ -22,7 +22,7 @@ namespace GuessingGame
             {
                 
                 Console.Write("Enter your guess: ");
-                string input = Console.ReadLine();
+                string input = Console.ReadLine()!;
                 if (input != null && int.TryParse(input, out int guess))
                 {
                     gameController.HandleGuess(guess, guessHistory);
@@ -32,8 +32,16 @@ namespace GuessingGame
                     Console.WriteLine("Invalid input. Please enter a valid number.");
                 }
 
+                Console.WriteLine("Do you want to play again? (y/n): ");
+                string response = Console.ReadLine()!;
+                if (response.ToLower() != "y")
+                {
+                    gameOver = true;
+                    Console.WriteLine("Thank you for playing!");
+                    guessHistory.DisplayHistory();
+                }
 
-                
+
             }
         }
     }
